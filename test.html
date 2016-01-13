@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>XI test page</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="test.css" type="text/css" />
+	</head>
+
+	<div id="listenerTest">
+		Listener Test
+	</div>
+
+	<form id="personForm" action="test_save_person.php">
+		<input type="text" name="firstName" placeholder="First name" /><br>
+		<input type="text" name="lastName" placeholder="Last name" /><br>
+		<input type="number" name="age" placeholder="Age" /><br>
+		<input type="file" name="photo" /><br>
+		<button type="submit">Save</button>
+	</form>
+
+	<ul id="personList"></ul>
+
+	<body>
+		<script src="XI.Element.js"></script>
+		<script src="XI.Ajax.js"></script>
+		<script src="XI.Helpers.js"></script>
+		<script src="XI.PubSub.js"></script>
+		<script src="XI.Listener.js"></script>
+		<script src="test.js"></script>
+	</body>
+</html>

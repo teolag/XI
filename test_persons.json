@@ -1,0 +1,4 @@
+[
+	{"personId":1, "firstName":"Lennart", "lastName":"Röhr", "age":44},
+	{"personId":2, "firstName":"Lisa", "lastName":"Jakobsson", "age":12}
+]
