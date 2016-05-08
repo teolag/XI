@@ -78,3 +78,38 @@ function printPersons() {
 	});
 	list.appendChild(fragment);
 }
+
+
+
+
+
+
+
+var data = [
+	{name: "Pelle Svensson", email: "pelle@svensson.se", tags:['Svans', 'Lego']},
+	{name: "Orvar Koltrast", email: "orre@westerlund.uk", tags:['Grilla', 'Kött']},
+	{name: "Grill-Brith Stekos", email: "mmm@meat.com"},
+	{name: "Lennart Göstén", email: "gosten@hotmail.com", tags:['Lingo']}
+];
+
+var personTemplate = XI.template('tplPersonItem', data, function(tpl, item) {
+	tpl.querySelector(".user-name").textContent = item.name;
+	tpl.querySelector(".user-email").textContent = item.email;
+
+	if(item.tags) {
+		var tagslist = tpl.querySelector(".user-tags");
+		var tplTag = tpl.querySelector("#tplPersonTag");
+		var tagTemplate = XI.template(tplTag, item.tags, function(tpl2, item2) {
+			tpl2.querySelector(".tag").textContent = item2;
+			return tpl2;
+		});
+		tagslist.appendChild(tagTemplate);
+	}
+	return tpl;
+});
+
+var personList2 = XI.selectId("personList2");
+personList2.appendChild(personTemplate);
+console.log(personTemplate);
+
+

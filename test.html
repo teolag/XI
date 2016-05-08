@@ -21,12 +21,30 @@
 
 	<ul id="personList"></ul>
 
+
+	<ul id="personList2"></ul>
+
+
+
+	<template id="tplPersonItem">
+		<li class="user">
+			<div class="user-name"></div>
+			<div class="user-email"></div>
+			<div class="user-tags">
+				<template id="tplPersonTag">
+					<div class="tag"></div>
+				</template>
+			</div>
+		</li>
+	</template>
+
 	<body>
 		<script src="XI.Element.js"></script>
 		<script src="XI.Ajax.js"></script>
 		<script src="XI.Helpers.js"></script>
 		<script src="XI.PubSub.js"></script>
 		<script src="XI.Listener.js"></script>
+		<script src="XI.Template.js"></script>
 		<script src="test.js"></script>
 	</body>
 </html>
