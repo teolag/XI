@@ -56,9 +56,9 @@ var XI = (function (xi) {
 		function onLoad(e) {
 			if(o.callback) {
 				if(e.target.responseType === 'json') {
-					o.callback(e.target.response);
+					o.callback(e.target.response, e.target.status);
 				} else {
-					o.callback(e);
+					o.callback(e, e.target.status);
 				}
 			}
 		}
